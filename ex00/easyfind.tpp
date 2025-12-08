@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/08 17:08:21 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/08 17:20:07 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 template <typename T>
 typename T::iterator easyfind(T& container, int needle)
 {
+	// find it manual
 	for (typename T::iterator it = container.begin(); it != container.end(); it++)
 	{
 		if (*it == needle)
