@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/05 15:17:49 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/08 16:51:22 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,11 @@
 
 int main()
 {
-    int a = 2;
-    int b = 3;
-    ::swap(a, b);
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    std::cout << "min(a, b) = " << ::min(a, b) << std::endl;
-    std::cout << "max(a, b) = " << ::max(a, b) << std::endl;
+    std::vector<int> container = { 10, 30, 32, 5, -4 , 100};
+   
+    int needle = 5;
+    std::cout << "did u find the needle? " << *easyfind(container, needle) << std::endl;
 
-    std::string c = "chaine1";
-    std::string d = "chaine2";
-    ::swap(c, d);
-    std::cout << "c = " << c << ", d = " << d << std::endl;
-    std::cout << "min(c, d) = " << ::min(c, d) << std::endl;
-    std::cout << "max(c, d) = " << ::max(c, d) << std::endl;
-
+    
     return 0;
 }
