@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/08 17:43:52 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/09 09:12:20 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
-	//std::cout << sp.shortestSpan() << std::endl;std::cout << sp.longestSpan() << std::endl;
+	std::cout << sp.shortestSpan() << std::endl;
+	//std::cout << sp.longestSpan() << std::endl;
 	return 0;
 
 }
