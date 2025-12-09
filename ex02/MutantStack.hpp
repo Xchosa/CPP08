@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:45 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 11:10:21 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/09 16:39:01 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,22 +16,28 @@
 #include <string>
 #include <stack>
 
+
+
 template <typename T>
-typename T::iterator easyfind(T& container, int needle);
-
-class MutantStack
+class MutantStack : public std::stack<T>
 {
-	private:
-
-
 	public:
 	MutantStack();
 	~MutantStack();
 	// 
+	typedef typename std::stack<T>::container_type::iterator iterator;
+	typedef typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
+	
+	reverse_iterator begin();
+	reverse_iterator end();
+	
+	//T top();
+	//void push( T nbr);
 
-	top():
-	push();
-}
+
+	//template <typename T>
+	//void push_back( T nbr);
+};
 
 
 
