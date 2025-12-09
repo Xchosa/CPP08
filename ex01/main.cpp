@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 10:54:43 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/09 18:01:03 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 
 int main()
 {
-     std::cout << "=== Test 2: Wide Range with Large Positive Numbers ===" << std::endl;
+    std::cout << "=== Test 2: Wide Range with Large Positive Numbers ===" << std::endl;
     Span sp2 = Span(10);
     sp2.addNumber(100);
     sp2.addNumber(50000);
@@ -77,7 +77,13 @@ int main()
     std::cout << "Shortest Span: " << sp4.shortestSpan() << std::endl;
     std::cout << "Longest Span: " << sp4.longestSpan() << std::endl;
     std::cout << std::endl;
-
+	
+	std::cout << "Copy assignment operator" << std::endl;
+	Span sp5 = sp4;
+	std::cout << "Shortest Span: " << sp4.shortestSpan() << std::endl;
+    std::cout << "Longest Span: " << sp4.longestSpan() << std::endl;
+	
+	
     return 0;
     return 0;
 }

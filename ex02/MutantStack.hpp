@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:45 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 16:39:01 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/09 17:50:21 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,19 +24,17 @@ class MutantStack : public std::stack<T>
 	public:
 	MutantStack();
 	~MutantStack();
+	
+	MutantStack( const MutantStack &object);
+	MutantStack& operator=( const MutantStack &object);
+	
 	// 
-	typedef typename std::stack<T>::container_type::iterator iterator;
-	typedef typename std::stack<T>::container_type::reverse_iterator reverse_iterator;
+	//typedef typename std::stack<T>::container_type::iterator iterator;
+	using iterator = typename std::stack<T>::container_type::iterator;
 	
-	reverse_iterator begin();
-	reverse_iterator end();
+	iterator begin();
+	iterator end();
 	
-	//T top();
-	//void push( T nbr);
-
-
-	//template <typename T>
-	//void push_back( T nbr);
 };
 
 

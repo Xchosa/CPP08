@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 10:49:29 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/09 17:58:53 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,23 @@ Span::Span(unsigned int Number) : _N(Number)
 }
 Span::~Span()
 {
-	// automatically cleans up
 }
+
+Span::Span(const Span &object) : _N(object._N) , _Numbers(object._Numbers)
+{
+	
+}
+
+Span& Span::operator=(const Span &object)
+{
+	if(this != &object)
+	{
+		this->_N = object._N;
+		this->_Numbers = object._Numbers;
+		
+	}
+	return(*this);
+};
 
 
 void Span::addNumber(unsigned int randNumber)

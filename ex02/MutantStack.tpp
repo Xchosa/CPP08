@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 16:39:21 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/09 17:42:25 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,32 @@ template <typename T>
 MutantStack<T>::~MutantStack()
 {
 };
+template <typename T>
+MutantStack<T>::MutantStack( const MutantStack &object) :std::stack<T>(object)
+{
+};
+
+template <typename T>
+MutantStack<T>& MutantStack<T>::operator=( const MutantStack &object)
+{
+	if(this != &object)
+	{
+		std::stack<T>::operator=(object);
+	}
+	return *this;
+}
 	// 
 
 template <typename T>
-typename MutantStack<T>::reverse_iterator MutantStack<T>::begin()
+typename MutantStack<T>::iterator MutantStack<T>::begin()
 {
-	return this->c.rbegin();
+	return this->c.begin();
 }
 
 template <typename T>
-typename MutantStack<T>::reverse_iterator MutantStack<T>::end()
+typename MutantStack<T>::iterator MutantStack<T>::end()
 {
-	return this->c.rend();
+	return this->c.end();
 }	
 
 // last in / first out 
