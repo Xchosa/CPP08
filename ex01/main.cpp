@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 09:12:20 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/09 10:54:43 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,70 @@
 
 
 
+//int main()
+//{
+//    Span sp = Span(5);
+//    sp.addNumber(6);
+//	sp.addNumber(3);
+//	sp.addNumber(17);
+//	sp.addNumber(9);
+//	sp.addNumber(11);
+//	std::cout << sp.shortestSpan() << std::endl;
+//	std::cout << sp.longestSpan() << std::endl;
+//	return 0;
+
+//}
+
 int main()
 {
-    Span sp = Span(5);
-    sp.addNumber(6);
-	sp.addNumber(3);
-	sp.addNumber(17);
-	sp.addNumber(9);
-	sp.addNumber(11);
-	std::cout << sp.shortestSpan() << std::endl;
-	//std::cout << sp.longestSpan() << std::endl;
-	return 0;
+     std::cout << "=== Test 2: Wide Range with Large Positive Numbers ===" << std::endl;
+    Span sp2 = Span(10);
+    sp2.addNumber(100);
+    sp2.addNumber(50000);
+    sp2.addNumber(303340);
+    sp2.addNumber(150000);
+    sp2.addNumber(200000);
+    sp2.addNumber(75000);
+    sp2.addNumber(250000);
+    sp2.addNumber(125000);
+    sp2.addNumber(180000);
+    sp2.addNumber(90000);
+    std::cout << "Shortest Span: " << sp2.shortestSpan() << std::endl;
+    std::cout << "Longest Span: " << sp2.longestSpan() << std::endl;
+    std::cout << std::endl;
 
+    std::cout << "=== Test 3: Wide Range with Large Negative Numbers ===" << std::endl;
+    Span sp3 = Span(10);
+    sp3.addNumber(-19923);
+    sp3.addNumber(-15000);
+    sp3.addNumber(-5000);
+    sp3.addNumber(-1000);
+    sp3.addNumber(-500);
+    sp3.addNumber(0);
+    sp3.addNumber(1000);
+    sp3.addNumber(5000);
+    sp3.addNumber(10000);
+    sp3.addNumber(20000);
+    std::cout << "Shortest Span: " << sp3.shortestSpan() << std::endl;
+    std::cout << "Longest Span: " << sp3.longestSpan() << std::endl;
+    std::cout << std::endl;
+
+    std::cout << "=== Test 4: Extreme Range Mix ===" << std::endl;
+    Span sp4 = Span(10);
+    sp4.addNumber(-19923);
+    sp4.addNumber(-10000);
+    sp4.addNumber(-1000);
+    sp4.addNumber(-100);
+    sp4.addNumber(0);
+    sp4.addNumber(1000);
+    sp4.addNumber(50000);
+    sp4.addNumber(150000);
+    sp4.addNumber(250000);
+    sp4.addNumber(303340);
+    std::cout << "Shortest Span: " << sp4.shortestSpan() << std::endl;
+    std::cout << "Longest Span: " << sp4.longestSpan() << std::endl;
+    std::cout << std::endl;
+
+    return 0;
+    return 0;
 }
-
-// 2
-// 14
