@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:45 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/10 11:52:04 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:15:28 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,13 @@ class Span
 	template <typename iterator>
 	void addNumber(iterator begin, iterator end)
 	{
-		if( iterator.size() >= _N)
-			throw std::out_of_range("no more space left");
-	
-		for()
-		//Numbers.insert(_Numbers.begin(), randNumber);
-	}
+		for(iterator it = begin; it != end ; it++)
+		{
+			if( _Numbers.size() >= _N)
+				throw std::out_of_range("no more space left");
+			_Numbers.push_back(*it);
+		}
+	};
 	
 };
 

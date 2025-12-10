@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/08 17:20:07 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:52:30 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,18 @@ typename T::iterator easyfind(T& container, int needle)
 	//}
 	//throw std::runtime_error("Element not found");
 
+}
+
+template <typename T>
+typename T::const_iterator easyfind(const T& container, int needle)
+{
+	auto found = std::find(container.begin(), container.end(), needle);
+	if (found != container.end())
+	{
+		std::cout << "Found with find"<< std::endl;
+		return  found;
+	}
+	throw std::runtime_error("Element not found");
 }
 	
 

@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/10 11:22:33 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:44:35 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,6 +182,24 @@ int main()
         }
         std::cout << std::endl;
     }
+    
+    std::cout << "\n=== Reverse Const Iterator ===" << std::endl;
+    {
+        MutantStack<int> tmp;
+        tmp.push(5);
+        tmp.push(17);
+        tmp.push(3);
+        const MutantStack<int> mstack = tmp;
+        
+        MutantStack<int>::const_reverse_iterator rit;
+        for(rit = mstack.rbegin(); rit != mstack.rend(); ++rit)
+        {
+            std::cout << '[' << *rit << "], ";
+        }
+        std::cout << std::endl;
+    }
+
+
     
     return 0;
 }
