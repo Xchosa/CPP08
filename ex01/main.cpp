@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 18:01:03 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/10 11:36:46 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@
 
 int main()
 {
-    std::cout << "=== Test 2: Wide Range with Large Positive Numbers ===" << std::endl;
+    std::cout << "=== Test 1: Wide Range with Large Positive Numbers ===" << std::endl;
+    //Span sp2 = Span(4);
     Span sp2 = Span(10);
     sp2.addNumber(100);
     sp2.addNumber(50000);
@@ -46,23 +47,17 @@ int main()
     std::cout << "Longest Span: " << sp2.longestSpan() << std::endl;
     std::cout << std::endl;
 
-    std::cout << "=== Test 3: Wide Range with Large Negative Numbers ===" << std::endl;
-    Span sp3 = Span(10);
-    sp3.addNumber(-19923);
-    sp3.addNumber(-15000);
-    sp3.addNumber(-5000);
-    sp3.addNumber(-1000);
-    sp3.addNumber(-500);
-    sp3.addNumber(0);
-    sp3.addNumber(1000);
-    sp3.addNumber(5000);
-    sp3.addNumber(10000);
-    sp3.addNumber(20000);
+    std::cout << "=== Test 2: Test with 20 000 numbers  ===" << std::endl;
+    Span sp3 = Span(20000);
+    for(int i = 0; i < 20000; i++)
+    {
+        sp3.addNumber((-1) * i *3);
+    }
     std::cout << "Shortest Span: " << sp3.shortestSpan() << std::endl;
     std::cout << "Longest Span: " << sp3.longestSpan() << std::endl;
     std::cout << std::endl;
 
-    std::cout << "=== Test 4: Extreme Range Mix ===" << std::endl;
+    std::cout << "=== Test 3: Extreme Range Mix ===" << std::endl;
     Span sp4 = Span(10);
     sp4.addNumber(-19923);
     sp4.addNumber(-10000);

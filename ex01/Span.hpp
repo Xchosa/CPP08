@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:45 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 17:51:33 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/10 11:52:04 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Span
 {
 	private:
 	unsigned int _N;
-	std::vector<int>_Numbers;
+	std::vector<long long>_Numbers;
 	
 
 	public:
@@ -35,9 +35,20 @@ class Span
 	Span(const Span &object);
 	Span& operator=(const Span &object);
 
-	void addNumber(unsigned int randNumber);
-	unsigned int shortestSpan();
-	unsigned int longestSpan();
+	void addNumber(long long randNumber);
+	long long shortestSpan();
+	long long longestSpan();
+
+
+	template <typename iterator>
+	void addNumber(iterator begin, iterator end)
+	{
+		if( iterator.size() >= _N)
+			throw std::out_of_range("no more space left");
+	
+		for()
+		//Numbers.insert(_Numbers.begin(), randNumber);
+	}
 	
 };
 

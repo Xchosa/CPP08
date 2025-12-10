@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/09 17:58:53 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/10 11:28:40 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Span& Span::operator=(const Span &object)
 };
 
 
-void Span::addNumber(unsigned int randNumber)
+void Span::addNumber(long long randNumber)
 {
 	if( _Numbers.size() >= _N)
 		throw std::out_of_range("no more space left");
@@ -53,18 +53,18 @@ void Span::addNumber(unsigned int randNumber)
 // 5 10 2 -4 20 3
 		
 
-unsigned int Span::shortestSpan()
+long long Span::shortestSpan()
 {
 	if(_Numbers.empty())
 		throw std::logic_error("no values saved");
 	if(_Numbers.size() == 1)
 		throw std::logic_error("No Span found");
 		
-	long double	Span =  std::numeric_limits<long double>::max();
-	long double	Span_tmp;
-	long double Span_absolut;
-	long double a;
-	long double b;
+	long long	Span =  std::numeric_limits<long long>::max();
+	long long	Span_tmp;
+	long long	Span_absolut;
+	long long	a;
+	long long	b;
 	
 	for( size_t i = 0; i < _Numbers.size(); i++)
 	{
@@ -84,18 +84,18 @@ unsigned int Span::shortestSpan()
 	return Span;
 		
 }
-unsigned int Span::longestSpan()
+long long Span::longestSpan()
 {
 	if(_Numbers.empty())
 		throw std::logic_error("no values saved");
 	if(_Numbers.size() == 1)
 		throw std::logic_error("No Span found");
 		
-	long double	Span = 0;
-	long double	Span_tmp;
-	long double Span_absolut;
-	long double a;
-	long double b;
+	long long	Span = 0;
+	long long	Span_tmp;
+	long long	Span_absolut;
+	long long	a;
+	long long	b;
 	
 	for( size_t i = 0; i < _Numbers.size(); i++)
 	{
