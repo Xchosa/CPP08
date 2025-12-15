@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/15 13:44:53 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:09:57 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 #include <limits>
 #include <vector> 
 #include <algorithm>
+
+
+#include "../color/color.hpp"
 
 Span::Span() : _N(0)
 {	
@@ -52,7 +55,7 @@ Span& Span::operator=(const Span &object)
 void Span::addNumber(long long randNumber)
 {
 	if( _Numbers.size() >= _N)
-		throw std::out_of_range("no more space left");
+		throw std::out_of_range(colortxt("no more space left", RED));
 	
 	_Numbers.push_back(randNumber);
 }
@@ -64,7 +67,7 @@ void Span::addNumber(std::vector <long long > ::iterator begin, std::vector <lon
 	for(auto it = begin; it != end ; it++)
 	{
 		if( _Numbers.size() >= _N)
-			throw std::out_of_range("no more space left");
+			throw std::out_of_range(colortxt("no more space left", RED));
 		_Numbers.push_back(*it);
 	}
 };
