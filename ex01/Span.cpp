@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/10 15:12:50 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/15 13:44:53 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@
 #include <vector> 
 #include <algorithm>
 
-
+Span::Span() : _N(0)
+{	
+}
 
 Span::Span(unsigned int Number) : _N(Number)
 {
@@ -54,6 +56,18 @@ void Span::addNumber(long long randNumber)
 	
 	_Numbers.push_back(randNumber);
 }
+
+
+
+void Span::addNumber(std::vector <long long > ::iterator begin, std::vector <long long > ::iterator end)
+{
+	for(auto it = begin; it != end ; it++)
+	{
+		if( _Numbers.size() >= _N)
+			throw std::out_of_range("no more space left");
+		_Numbers.push_back(*it);
+	}
+};
 // 5 10 2 -4 20 3
 		
 // O(n^n)

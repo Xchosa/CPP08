@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/15 13:03:41 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/15 13:49:11 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,44 @@ template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::end()
 {
 	return this->c.end();
+}
+
+template <typename T>
+typename MutantStack<T>::const_iterator MutantStack<T>::begin() const
+{
+	return this->c.begin();
+}
+
+template <typename T>
+typename MutantStack<T>::const_iterator MutantStack<T>::end() const
+{
+	return this->c.end();
+}
+
+
+
+
+
+template <typename T>
+typename MutantStack<T>::reverse_iterator  MutantStack<T>::rbegin()
+{
+	return this->c.rbegin();
+}
+
+template <typename T>
+typename MutantStack<T>::reverse_iterator  MutantStack<T>::rend()
+{
+	return this->c.rend();
+}
+
+template <typename T>
+typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rbegin() const
+{
+	return this->c.rbegin();
+}
+
+template <typename T>
+typename MutantStack<T>::const_reverse_iterator MutantStack<T>::rend() const
+{
+	return this->c.rend();
 }
