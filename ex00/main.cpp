@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/15 14:07:52 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:06:16 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 
 int main()
 {
+	section("vector container");
 	std::vector<int> container = { 10, 30, 32, 5, -4 , 100};
-
+	
 	try
 	{
 		int needle = 5;
@@ -28,7 +29,7 @@ int main()
 		std::cerr << e.what() << '\n';
 	}
 	
-
+	section("const container");
 	std::vector<int> const constContainer = { 10, 30, 32, 5, -4 , 100};
 	try
 	{
@@ -39,9 +40,7 @@ int main()
 	{
 		std::cerr << e.what() << '\n';
 	}
-	
 
-    
     
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/05 13:45:38 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/15 13:52:24 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/15 15:03:19 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <iterator>
 #include <vector>
 
+#include "../color/color.hpp"
 
 template <typename T>
 typename T::iterator easyfind(T& container, int needle)
@@ -36,10 +37,10 @@ typename T::iterator easyfind(T& container, int needle)
 	auto found = std::find(container.begin(), container.end(), needle);
 	if (found != container.end())
 	{
-		std::cout << "Found with find"<< std::endl;
+		colorprint("Found with std::find", GREEN);
 		return  found;
 	}
-	throw std::runtime_error("Element not found");
+	throw std::runtime_error(colortxt("Element not found", RED));
 
 }
 
@@ -49,10 +50,10 @@ typename T::const_iterator easyfind(const T& container, int needle)
 	auto found = std::find(container.begin(), container.end(), needle);
 	if (found != container.end())
 	{
-		std::cout << "Found with find"<< std::endl;
+		colorprint("Found with std::find", GREEN);
 		return  found;
 	}
-	throw std::runtime_error("Element not found");
+	throw std::runtime_error(colortxt("Element not found", RED));
 }
 	
 
