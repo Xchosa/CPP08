@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/15 13:15:37 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/15 14:07:52 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,16 @@ int main()
 	
 
 	std::vector<int> const constContainer = { 10, 30, 32, 5, -4 , 100};
+	try
+	{
+		int constNeedle = 2;
+		std::cout << "did u find the needle in a const container? " << *easyfind(constContainer, constNeedle) << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
 	
-	int constNeedle = 10;
-	std::cout << "did u find the needle in a const container? " << *easyfind(constContainer, constNeedle) << std::endl;
 
     
     

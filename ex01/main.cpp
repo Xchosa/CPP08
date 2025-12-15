@@ -6,7 +6,7 @@
 /*   By: poverbec <poverbec@student.42heilbronn>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 16:26:46 by poverbec          #+#    #+#             */
-/*   Updated: 2025/12/15 13:35:59 by poverbec         ###   ########.fr       */
+/*   Updated: 2025/12/15 14:06:33 by poverbec         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int main()
     std::cout << std::endl;
 
     std::cout << "=== Test 2: Test with 20 000 numbers  ===" << std::endl;
-    Span sp3 = Span(2000);
+    Span sp3 = Span(20000);
     std::vector< long long >numberContainer;
     for(int i = 0; i < 20000; i++)
     {
